@@ -1,0 +1,48 @@
+# Общие игнорируемые файлы
+*.exe
+*.dll
+*.pdb
+*.user
+*.suo
+*.userprefs
+*.log
+*.DS_Store
+
+# Папки сборки
+**/bin/
+**/obj/
+**/packages/
+
+# Конфигурационные файлы с токенами
+**/bot_settings.json
+**/appsettings.json
+**/secrets.json
+
+# База данных экстрактора
+**/Output/
+**/*.db
+**/*.sqlite
+
+# Файлы Visual Studio
+.vs/
+*.csproj.user
+*.csproj.userprefs
+
+# Временные файлы
+**/temp/
+**/tmp/
+**/logs/
+
+# Игнорировать всё в Output
+RaidLootBot/Output/
+MaNGOSExtractor/Output/
+**/Output/*.json
+**/Output/icons/
+
+# Файлы DBC (они большие и могут быть под лицензией)
+**/*.dbc
+**/dbc/
+
+# NuGet пакеты
+packages/
+*.nupkg
