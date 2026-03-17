@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RaidLootCore.Models
+namespace MaNGOSExtractor.MPQ.OldModels
 {
     public class Spell
     {

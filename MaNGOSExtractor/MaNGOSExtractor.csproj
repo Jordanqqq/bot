@@ -8,8 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySqlConnector" Version="2.5.0" />
+    <PackageReference Include="BLPSharp" Version="0.1.0" />
+    <PackageReference Include="MySql.Data" Version="9.6.0" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="11.0.0-preview.2.26159.112" />
+    <PackageReference Include="War3Net.IO.Mpq" Version="6.0.2" />
   </ItemGroup>
 
   <ItemGroup>
