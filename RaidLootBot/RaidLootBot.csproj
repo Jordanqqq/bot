@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.6.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="11.0.0-preview.2.26159.112" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MaNGOSExtractor\MaNGOSExtractor.csproj" />
+    <ProjectReference Include="..\RaidLootCore\RaidLootCore.csproj" />
+    <ProjectReference Include="..\RaidLootInfrastructure\RaidLootInfrastructure.csproj" />
+    <ProjectReference Include="..\RaidLootServices\RaidLootServices\RaidLootServices.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="raids.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

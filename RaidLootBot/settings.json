@@ -1,0 +1,38 @@
+{
+  "DownloadSettings": {
+    "--- CLASSIC (Level 60) ---": 0,
+    "Molten Core": 1,
+    "Blackwing Lair": 0,
+    "Temple of Ahn'Qiraj": 0,
+    "Ruins of Ahn'Qiraj": 0,
+    "Zul'Gurub": 0,
+
+    "--- THE BURNING CRUSADE (Level 70) ---": 0,
+    "Karazhan": 0,
+    "Gruul's Lair": 0,
+    "Magtheridon's Lair": 0,
+    "Serpentshrine Cavern": 0,
+    "The Eye (Tempest Keep)": 0,
+    "Battle for Mount Hyjal": 0,
+    "Black Temple": 0,
+    "Sunwell Plateau": 0,
+    "Zul'Aman": 0,
+
+    "--- WRATH OF THE LICH KING (Level 80) ---": 0,
+    "Naxxramas": 0,
+    "The Eye of Eternity": 0,
+    "The Obsidian Sanctum": 0,
+    "Ulduar": 0,
+    "Trial of the Crusader": 0,
+    "Onyxia's Lair": 0,
+    "Icecrown Citadel": 1,
+    "Ruby Sanctum": 0,
+    "Vault of Archavon": 0
+  },
+  "GlobalSettings": {
+    "DownloadNormal": true,
+    "DownloadHeroic": true,
+    "Download10Player": true,
+    "Download25Player": true
+  }
+}
