@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using MaNGOSExtractor.MPQ.Models;
 using RaidLootCore.Models;
 
 namespace MaNGOSExtractor.Extractor.DbcParser
@@ -82,15 +83,10 @@ namespace MaNGOSExtractor.Extractor.DbcParser
                     NameRu = nameEn,
                     DescriptionEn = tooltipEn,
                     DescriptionRu = tooltipEn,
-                    CastTime = castTime,
-                    Cooldown = cooldown / 1000f,
-                    Duration = duration,
-                    School = 0,
-                    Radius = 0,
-                    DangerLevel = 1,
-                    IsDamage = nameEn.ToLower().Contains("damage") || nameEn.ToLower().Contains("strike"),
-                    IsHeal = nameEn.ToLower().Contains("heal") || nameEn.ToLower().Contains("cure"),
-                    IsDebuff = nameEn.ToLower().Contains("curse") || nameEn.ToLower().Contains("poison") || nameEn.ToLower().Contains("debuff")
+                    CastTimeId = castTime,
+                    DurationId = duration,
+                    School = 0
+                    // Больше ничего не добавляем
                 };
 
                 spells.Add(spell);

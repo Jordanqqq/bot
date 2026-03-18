@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using RaidLootCore.Models;
+using MaNGOSExtractor.MPQ.Models;  
 
 namespace MaNGOSExtractor.Extractor.Parsers
 {

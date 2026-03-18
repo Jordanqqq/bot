@@ -3,5 +3,6 @@
   "Port": 3306,
   "Database": "mangos",
   "User": "mangos",
-  "Password": "mangos"
+  "Password": "mangos",
+  "WowPath": "D:/ноут/CircleL/CircleL"
 }

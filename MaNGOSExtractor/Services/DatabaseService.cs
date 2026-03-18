@@ -30,8 +30,8 @@ public class DatabaseService : IDisposable
             return false;
         }
     }
-
-    public async Task<List<T>> QueryAsync<T>(string sql, Func<MySqlDataReader, T> mapper)
+    
+    public async Task<List<T>> QueryAsync<T>(string sql, Func<IDataReader, T> mapper)
     {
         var results = new List<T>();
 

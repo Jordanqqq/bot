@@ -1,15 +1,16 @@
 ﻿using System.Text;
 using MaNGOSExtractor.MPQ.Models;
+using MaNGOSExtractor.MyMpqReader;  
 
 namespace MaNGOSExtractor.MPQ;
 
 public class DbcParser
 {
-    private readonly MpqExtractor _mpq;
+    private readonly MyMpqExtractor _mpq;
     private readonly Dictionary<string, List<object>> _cache = new();
 
     // Добавляем конструктор, который принимает MpqExtractor
-    public DbcParser(MpqExtractor mpq)
+    public DbcParser(MyMpqExtractor mpq)
     {
         _mpq = mpq;
     }

@@ -42,6 +42,10 @@ public class Spell
     public int ManaPerSecond { get; set; }
     public int ManaPerSecondPerLevel { get; set; }
     public int PowerType { get; set; }
+
+    public bool IsDamage { get; set; }
+    public bool IsHeal { get; set; }
+    public bool IsDebuff { get; set; }
 }
 
 public class SpellCastTime

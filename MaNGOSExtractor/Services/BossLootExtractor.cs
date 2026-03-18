@@ -82,62 +82,61 @@ public class BossLootExtractor
 
     private async Task<List<RawCreature>> GetBossesAsync()
     {
-        // rank 3 = элитный босс, rank 4 = редкий элитный босс
         string sql = @"
-            SELECT entry, name, minlevel, maxlevel, rank, HealthModifier, 
-                   ManaModifier, ArmorModifier, damage_modifier, 
-                   lootid, SkinLootId, zoneid
-            FROM creature_template
-            WHERE rank >= 3 
-              AND name NOT LIKE '%Trigger%'
-              AND name NOT LIKE '%Trash%'
-              AND name NOT LIKE '%Invisible%'
-            ORDER BY entry";
+        SELECT entry, name, minlevel, maxlevel, rank, HealthModifier, 
+               ManaModifier, ArmorModifier, damage_modifier, 
+               lootid, SkinLootId, zoneid
+        FROM creature_template
+        WHERE rank >= 3 
+          AND name NOT LIKE '%Trigger%'
+          AND name NOT LIKE '%Trash%'
+          AND name NOT LIKE '%Invisible%'
+        ORDER BY entry";
 
         return await _db.QueryAsync(sql, reader => new RawCreature
         {
-            Entry = reader.GetInt32("entry"),
-            Name = reader.GetString("name"),
-            Rank = reader.GetInt32("rank"),
-            ZoneId = reader.GetInt32("zoneid")
+            Entry = reader.GetInt32(reader.GetOrdinal("entry")),
+            Name = reader.GetString(reader.GetOrdinal("name")),
+            Rank = reader.GetInt32(reader.GetOrdinal("rank")),
+            ZoneId = reader.GetInt32(reader.GetOrdinal("zoneid"))
         });
     }
 
     private async Task<List<RawLoot>> GetLootAsync()
     {
         string sql = @"
-            SELECT entry, item, ChanceOrQuestChance, groupid, mincountOrRef, maxcount
-            FROM creature_loot_template
-            WHERE item > 0";
+        SELECT entry, item, ChanceOrQuestChance, groupid, mincountOrRef, maxcount
+        FROM creature_loot_template
+        WHERE item > 0";
 
         return await _db.QueryAsync(sql, reader => new RawLoot
         {
-            Entry = reader.GetInt32("entry"),
-            Item = reader.GetInt32("item"),
-            Chance = reader.GetFloat("ChanceOrQuestChance")
+            Entry = reader.GetInt32(reader.GetOrdinal("entry")),
+            Item = reader.GetInt32(reader.GetOrdinal("item")),
+            Chance = reader.GetFloat(reader.GetOrdinal("ChanceOrQuestChance"))
         });
     }
 
     private async Task<List<RawItem>> GetItemsAsync()
     {
         string sql = @"
-            SELECT entry, name, Quality, class, subclass, InventoryType,
-                   ItemLevel, RequiredLevel, bonding
-            FROM item_template
-            WHERE Quality >= 3  -- Редкие и выше
-            ORDER BY entry";
+        SELECT entry, name, Quality, class, subclass, InventoryType,
+               ItemLevel, RequiredLevel, bonding
+        FROM item_template
+        WHERE Quality >= 3  -- Редкие и выше
+        ORDER BY entry";
 
         return await _db.QueryAsync(sql, reader => new RawItem
         {
-            Entry = reader.GetInt32("entry"),
-            Name = reader.GetString("name"),
-            Quality = reader.GetInt32("Quality"),
-            Class = reader.GetInt32("class")
+            Entry = reader.GetInt32(reader.GetOrdinal("entry")),
+            Name = reader.GetString(reader.GetOrdinal("name")),
+            Quality = reader.GetInt32(reader.GetOrdinal("Quality")),
+            Class = reader.GetInt32(reader.GetOrdinal("class"))
         });
     }
 }
 
-public class BossLootInfo
+    public class BossLootInfo
 {
     public int Entry { get; set; }
     public string NameRu { get; set; }

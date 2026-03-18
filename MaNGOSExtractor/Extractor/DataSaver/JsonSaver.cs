@@ -1,5 +1,5 @@
-﻿using MaNGOSExtractor.Models;
-using RaidLootCore.Models;  // ТОЛЬКО ЭТОТ using!
+﻿using MaNGOSExtractor.MPQ.Models;
+using RaidLootCore.Models; 
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
